@@ -2,10 +2,10 @@
   "version": "public-package-0.1",
   "purpose": "Reviewed public file inventory; generated run archives are excluded.",
   "files": {
-    ".github/workflows/ci.yml": "59c52273427ff78f1f7b7b2f63a4021076da15f797a7d6736783e86708068840",
+    ".github/workflows/ci.yml": "c52dc062957bc0a3f867d91adc5799415defe1f1cd5b879d967b5fe4373d58fc",
     ".gitignore": "24d8b05b529ea2a24673bf32c2714fb7eb875884fb1e745e38a1d032672b513d",
     "CONTRIBUTING.md": "bd6064e3001c727eb60e549c24d26b7dfcaa94b52cfdb37628639d922bfff257",
-    "README.md": "241b0fa2d49893428c6b67e1bf6097acf265223d3749649d605b7e46c26b174f",
+    "README.md": "31d6f30cb62c1053ee9a572833ccf717f36453fa000db660d5b2588ec4409dd0",
     "docs/architecture.md": "c139c28abcbc11b62890c33c21317bc1ea245ce1a703031b86031233f4c1f19b",
     "docs/architecture.svg": "0df86500582bd7191f2955275f2272167cf446ca5bad294482d3206caa3e4b57",
     "docs/case-study.md": "206fda9302ad6a39a05ccfd2daf0fa16e64fc6c4c0ba0989d277f020af34e2c1",

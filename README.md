@@ -1,5 +1,7 @@
 # Audience Sim
 
+[![Offline contracts and browser boundaries](https://github.com/james-philo-labs/audience-sim/actions/workflows/ci.yml/badge.svg)](https://github.com/james-philo-labs/audience-sim/actions/workflows/ci.yml)
+
 An inspectable prototype for a small editorial decision: choose between two article treatments, examine persona-specific forecasts and their evidence, then decide what to test with real readers.
 
 [Explore the recorded demo](https://philo-audience-lab.vercel.app) · [Compare the articles](https://philo-audience-lab.vercel.app/compare.html) · [System design](docs/architecture.md) · [Recorded case study](docs/case-study.md)
