@@ -1,0 +1,17 @@
+{
+  "id": "authored-fixture-not-provider-output",
+  "model": "authored-fixture",
+  "status": "completed",
+  "usage": null,
+  "output": [
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"interest_rating\": 3, \"completion_likelihood\": 0.5, \"estimated_reading_time_minutes\": 4, \"likely_drop_off_passage\": {\"quote\": \"A model demonstration can look convincing while leaving the action-to-outcome contract unclear.\", \"reason\": \"Authored test: asks for a concrete check earlier.\"}, \"confusing_claims\": [], \"useful_takeaway\": \"A check needs a declared trigger and bounded evidence.\", \"suggested_revision\": \"Move the concrete check into the opening.\", \"reason\": \"Arbitrary software fixture; not a model forecast.\", \"uncertainty\": {\"calibration_status\": \"not_calibrated\", \"interest_rating\": {\"low\": 2, \"high\": 4, \"confidence_interval\": null, \"coverage\": \"unknown\"}, \"completion_likelihood\": {\"low\": 0.2, \"high\": 0.8, \"confidence_interval\": null, \"coverage\": \"unknown\"}, \"estimated_reading_time_minutes\": {\"low\": 2, \"high\": 7, \"confidence_interval\": null, \"coverage\": \"unknown\"}}}"
+        }
+      ]
+    }
+  ]
+}

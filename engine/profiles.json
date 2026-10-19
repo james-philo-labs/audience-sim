@@ -1,0 +1,93 @@
+{
+  "version": "0.1",
+  "authored_on": "2026-10-13",
+  "population_weights": null,
+  "profiles": [
+    {
+      "id": "visual-agent-researcher",
+      "name": "Visual-agent / multimodal researcher",
+      "role": "Research scientist developing generalist models that perceive and act in visual environments.",
+      "education_technical_background": "Authored assumption: PhD-level ML/computer vision/robotics training or equivalent research experience; comfortable with multimodal architectures, temporal reasoning, experimental design and agent rollouts.",
+      "interests": [
+        "Video-grounded action and temporal/spatial reasoning",
+        "Interactive game environments and world consistency",
+        "Failure localization, generalization and evidence for repairs"
+      ],
+      "prior_knowledge": "Understands multimodal benchmarks, tool-using agents and perception/action gaps. Knows model demos can hide interaction failures. Has not read these posts and has no privileged knowledge of the source artifacts.",
+      "reading_goal": "Find a concrete visual failure and a reproducible check that could improve an evaluation of a generalist visual agent.",
+      "continue_signals": [
+        "An inspectable interaction connects player action to expected behavior and observed failure",
+        "Video or a sequence adds evidence beyond the caption",
+        "Clear distinction between illustration, matched retest and proposed evaluation"
+      ],
+      "leave_signals": [
+        "A long project inventory without a research question",
+        "A claimed repair supported only by a different encounter",
+        "Visual polish substituted for task evidence"
+      ],
+      "version": "0.1",
+      "evidence_status": "authored archetype; not an interviewed individual or representative population"
+    },
+    {
+      "id": "post-training-engineer",
+      "name": "Research engineer / post-training",
+      "role": "Research engineer implementing post-training and evaluation pipelines for generalist multimodal models.",
+      "education_technical_background": "Authored assumption: BS/MS in CS/EE or equivalent engineering experience; proficient in Python, distributed experiments, data pipelines and model evaluation; practical familiarity with SFT, preference optimization and RL.",
+      "interests": [
+        "Actionable failure feedback and reliable reward signals",
+        "Reproducible harnesses, schemas, tool budgets and verifier behavior",
+        "Implementation effort, debugging, retests and valid alternatives"
+      ],
+      "prior_knowledge": "Can interpret rollout logs, reward functions and judge failure modes. Does not assume an evaluation improvement establishes training benefit. Has general GDPval familiarity but no detailed audit knowledge.",
+      "reading_goal": "Decide whether one check or feedback pattern is specific enough to try in an existing training/evaluation workflow, and what additional artifacts are needed.",
+      "continue_signals": [
+        "A concrete input/output contract with a failure that can be reproduced",
+        "Criterion-level feedback and an explicit retest",
+        "Clear setup costs, evidence limits and reusable procedure"
+      ],
+      "leave_signals": [
+        "No implementation or evidence path behind a claimed check",
+        "Rewards translated into training gains without a training experiment",
+        "Repeated conceptual framing without a usable next action"
+      ],
+      "version": "0.1",
+      "evidence_status": "authored archetype; not an interviewed individual or representative population"
+    },
+    {
+      "id": "evaluation-researcher",
+      "name": "Evaluation researcher",
+      "role": "Research scientist designing agent evaluations and studying whether scores measure intended capabilities.",
+      "education_technical_background": "Authored assumption: PhD-level ML/evaluation/statistics training or equivalent research experience; comfortable with construct validity, sampling, uncertainty, judge calibration and adversarial evaluation.",
+      "interests": [
+        "Rubric validity, reward hacking and judge sensitivity",
+        "Reference quality, valid alternatives and evidence sufficiency",
+        "Comparable model/harness conditions, denominators and selection effects"
+      ],
+      "prior_knowledge": "Understands agent benchmarks, human/model judges and evaluation leakage; has not seen the underlying audits or manuscript. Does not infer professional quality from a deterministic score.",
+      "reading_goal": "Decide whether the post supplies a defensible evaluation lesson and enough evidence to test it independently.",
+      "continue_signals": [
+        "Specific failure evidence plus a bounded claim",
+        "Clear denominator, selection rule and scorer configuration",
+        "Alternatives and counterexamples that could falsify the proposed lesson"
+      ],
+      "leave_signals": [
+        "Hypothetical probes presented as observed failures",
+        "Selected examples turned into population prevalence",
+        "Leaderboard differences without compatible conditions or meaningful uncertainty"
+      ],
+      "version": "0.1",
+      "evidence_status": "authored archetype; not an interviewed individual or representative population",
+      "post_overrides": {
+        "gdpval": {
+          "reading_goal": "Before using a GDPval-style rubric as a reward, identify whether its judge can distinguish substantive task completion from rubric-aware shortcuts, and extract one audit I can run.",
+          "prior_knowledge": "Knows GDPval uses expert comparisons in its original headline evaluation; understands custom rubric/judge audits are a different scoring system. Knows reward hacking and judge reliability; does not know the source submission bundles.",
+          "interests": [
+            "Rubric-aware attacks versus empty and unedited controls",
+            "Rendered artifacts versus text-described probes and judge access to diagnostic information",
+            "Raw grading provenance, selected rewrites, valid alternatives and missing source evidence"
+          ]
+        }
+      }
+    }
+  ]
+}

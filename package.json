@@ -1,0 +1,13 @@
+{
+  "name": "audience-sim",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-bounded article audience simulation: explicit exposure, clocks, citations and uncertainty",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "test": "python3 scripts/test_unit.py",
+    "test:browser": "node tests/browser.cjs",
+    "check:public": "python3 scripts/check_public.py"
+  },
+  "devDependencies": {"playwright": "1.62.1"}
+}

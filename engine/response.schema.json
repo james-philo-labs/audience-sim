@@ -1,0 +1,202 @@
+{
+  "type": "object",
+  "properties": {
+    "interest_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "completion_likelihood": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "estimated_reading_time_minutes": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "likely_drop_off_passage": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "quote",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "confusing_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "quote",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 5
+    },
+    "useful_takeaway": {
+      "type": "string",
+      "minLength": 1
+    },
+    "suggested_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncertainty": {
+      "type": "object",
+      "properties": {
+        "calibration_status": {
+          "type": "string",
+          "enum": [
+            "not_calibrated"
+          ]
+        },
+        "interest_rating": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "high": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "confidence_interval": {
+              "type": "null"
+            },
+            "coverage": {
+              "type": "string",
+              "enum": [
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "confidence_interval",
+            "coverage"
+          ],
+          "additionalProperties": false
+        },
+        "completion_likelihood": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "high": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "confidence_interval": {
+              "type": "null"
+            },
+            "coverage": {
+              "type": "string",
+              "enum": [
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "confidence_interval",
+            "coverage"
+          ],
+          "additionalProperties": false
+        },
+        "estimated_reading_time_minutes": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "high": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "confidence_interval": {
+              "type": "null"
+            },
+            "coverage": {
+              "type": "string",
+              "enum": [
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "confidence_interval",
+            "coverage"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "calibration_status",
+        "interest_rating",
+        "completion_likelihood",
+        "estimated_reading_time_minutes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "interest_rating",
+    "completion_likelihood",
+    "estimated_reading_time_minutes",
+    "likely_drop_off_passage",
+    "confusing_claims",
+    "useful_takeaway",
+    "suggested_revision",
+    "reason",
+    "uncertainty"
+  ],
+  "additionalProperties": false
+}

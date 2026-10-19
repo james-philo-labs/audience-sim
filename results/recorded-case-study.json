@@ -1,0 +1,264 @@
+{
+  "kind": "historical_recorded_summary_not_new_inference",
+  "recorded_on": "2026-10-16",
+  "public_replay_release": "1.3.0",
+  "source_url": "https://philo-audience-lab.vercel.app",
+  "source_json_sha256": "24aafc7fbec128273526f46cff0dad036e6e7d826b0d7b2622f15dacd69dd0f6",
+  "full_raw_archives_included": false,
+  "new_provider_calls": 0,
+  "calibration_status": "not_calibrated",
+  "confidence_interval": null,
+  "coverage": "unknown",
+  "measured_reader_outcomes": 0,
+  "articles": [
+    {
+      "id": "original",
+      "label": "A",
+      "version": "Frozen v2",
+      "source_sha256": "1851203c83771c77d035a4601d6206ef3b3ce62055d1a67a61d126d8b8b59fb7",
+      "reader_url": "https://philo-audience-lab.vercel.app/reader.html?t=original",
+      "editor_preferred": false,
+      "session": {
+        "personaId": "visual-agent-researcher",
+        "runtime": "0.4",
+        "model": "gpt-6-luna",
+        "condition": "1440 \u00d7 900 \u00b7 muted \u00b7 activated motion",
+        "maxActions": 48,
+        "actions": 27,
+        "termination": "finish",
+        "activeSeconds": 123.892235,
+        "readingSeconds": 100,
+        "playbackSeconds": 8.092235,
+        "capCensored": false,
+        "failed": false,
+        "initialForecast": {
+          "completion_likelihood": 0.72,
+          "plausible_low": 0.45,
+          "plausible_high": 0.9,
+          "confidence_interval": null,
+          "coverage": "unknown",
+          "calibration_status": "not_calibrated",
+          "reason": "The opening matches the goal of locating a concrete visual-agent failure, but it does not yet establish whether later material offers an inspectable test or merely general claims."
+        }
+      },
+      "closing_visited": true
+    },
+    {
+      "id": "candidate",
+      "label": "B",
+      "version": "Candidate 0.3",
+      "source_sha256": "d3ed10d5614318a8a4042fa9a6e4698161afa4d7517d0d85bf5cd4401ca49d2f",
+      "reader_url": "https://philo-audience-lab.vercel.app/reader.html?t=candidate",
+      "editor_preferred": true,
+      "session": {
+        "personaId": "visual-agent-researcher",
+        "runtime": "0.4",
+        "model": "gpt-6-luna",
+        "condition": "1440 \u00d7 900 \u00b7 muted \u00b7 activated motion",
+        "maxActions": 48,
+        "actions": 19,
+        "termination": "abandon",
+        "activeSeconds": 36.236695,
+        "readingSeconds": 12,
+        "playbackSeconds": 12.136695,
+        "capCensored": false,
+        "failed": false,
+        "initialForecast": {
+          "completion_likelihood": 0.72,
+          "plausible_low": 0.48,
+          "plausible_high": 0.88,
+          "confidence_interval": null,
+          "coverage": "unknown",
+          "calibration_status": "not_calibrated",
+          "reason": "The opening offers a specific, testable visual-agent failure and suggests a QA sequence, but the rest of the article may or may not provide reproducible evaluation evidence."
+        }
+      },
+      "closing_visited": false
+    }
+  ],
+  "forecast_studies": [
+    {
+      "study_id": "initial-six-cell",
+      "model": "gpt-6-luna",
+      "recorded_on": "2026-10-16",
+      "condition": "full-text; no media or layout; n=1 per cell; independently elicited forecast",
+      "cells": [
+        {
+          "persona_id": "visual-agent-researcher",
+          "arm": "original",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.76,
+              "low": 0.58,
+              "high": 0.88
+            },
+            "interest": {
+              "estimate": 4.3,
+              "low": 3.6,
+              "high": 4.8
+            },
+            "reading_minutes": {
+              "estimate": 7.5,
+              "low": 5.5,
+              "high": 10.5
+            }
+          }
+        },
+        {
+          "persona_id": "visual-agent-researcher",
+          "arm": "candidate",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.85,
+              "low": 0.69,
+              "high": 0.94
+            },
+            "interest": {
+              "estimate": 4.4,
+              "low": 3.6,
+              "high": 4.9
+            },
+            "reading_minutes": {
+              "estimate": 6.5,
+              "low": 4.5,
+              "high": 9.5
+            }
+          }
+        },
+        {
+          "persona_id": "post-training-engineer",
+          "arm": "original",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.82,
+              "low": 0.68,
+              "high": 0.92
+            },
+            "interest": {
+              "estimate": 4.2,
+              "low": 3.5,
+              "high": 4.8
+            },
+            "reading_minutes": {
+              "estimate": 5.5,
+              "low": 4.0,
+              "high": 8.0
+            }
+          }
+        },
+        {
+          "persona_id": "post-training-engineer",
+          "arm": "candidate",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.86,
+              "low": 0.68,
+              "high": 0.95
+            },
+            "interest": {
+              "estimate": 4.4,
+              "low": 3.6,
+              "high": 4.9
+            },
+            "reading_minutes": {
+              "estimate": 6.5,
+              "low": 4.5,
+              "high": 9.5
+            }
+          }
+        },
+        {
+          "persona_id": "evaluation-researcher",
+          "arm": "original",
+          "status": "excluded"
+        },
+        {
+          "persona_id": "evaluation-researcher",
+          "arm": "candidate",
+          "status": "excluded"
+        }
+      ]
+    },
+    {
+      "study_id": "evaluation-scope-v02",
+      "model": "gpt-6-luna",
+      "recorded_on": "2026-10-16",
+      "condition": "full-text; no media or layout; n=1 per cell; independently elicited forecast",
+      "cells": [
+        {
+          "persona_id": "evaluation-researcher",
+          "arm": "original",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.82,
+              "low": 0.68,
+              "high": 0.91
+            },
+            "interest": {
+              "estimate": 4.1,
+              "low": 3.3,
+              "high": 4.7
+            },
+            "reading_minutes": {
+              "estimate": 7.5,
+              "low": 5.5,
+              "high": 10.5
+            }
+          }
+        },
+        {
+          "persona_id": "evaluation-researcher",
+          "arm": "candidate",
+          "status": "validated",
+          "forecast": {
+            "completion": {
+              "estimate": 0.82,
+              "low": 0.68,
+              "high": 0.92
+            },
+            "interest": {
+              "estimate": 4.3,
+              "low": 3.6,
+              "high": 4.8
+            },
+            "reading_minutes": {
+              "estimate": 5.8,
+              "low": 4.5,
+              "high": 7.8
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "kind": "scope_contamination",
+      "excluded_cells": 2,
+      "original_batch_cells": 6,
+      "reason": "An unrelated article override entered the evaluation persona. The original pair remains excluded.",
+      "repair": "Separate predeclared two-cell scope-0.2 study; no replacement of original outputs."
+    },
+    {
+      "kind": "unrevealed_action_citation",
+      "runtime": "0.3",
+      "attempted_decision": 22,
+      "executed_actions": 21,
+      "verdict": "failed; no accepted terminal feedback; comparison inconclusive",
+      "repair": "Runtime 0.4 constrains action references to encountered evidence IDs; historical failed outputs remain excluded."
+    }
+  ],
+  "limits": [
+    "Summarized historical record, not the complete raw run archive.",
+    "Full-text forecasts and viewport sessions use different exposure and forecast origins.",
+    "One trace per arm and different revealed content cannot establish a treatment effect.",
+    "Conditional reading-time estimates are hypothetical; activeSeconds are simulated, not measured human time.",
+    "Closing review is a separate targeted inspection, not evidence that the session visited the closing.",
+    "The editor preferred B; real-reader outcomes remain zero."
+  ]
+}
