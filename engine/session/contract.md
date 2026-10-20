@@ -1,4 +1,4 @@
-# Bounded browser reading contract — public 0.1
+# Bounded browser reading contract — public 0.2
 
 Derived from session runtime 0.4. A run is one scoped authored persona, one frozen article bundle and one fresh browser context. The condition is desktop 1440×900, muted, with motion activated on request. No live model requests occur during preparation, fixture execution or CI.
 
@@ -22,7 +22,7 @@ Simulated active time is the union of read/play intervals plus authored interact
 
 ## Forecast and feedback
 
-The initial schema requires a first-viewport forecast. Later schemas require null. Ranges have unknown coverage, null confidence interval and `not_calibrated` status. Terminal interest/takeaway/revision is retrospective. It may cite encountered evidence IDs only. The executor attaches the complete supplied text fragment, or null for image/frame evidence. An ID cannot authorize quoting a neighboring or unseen paragraph. Citation integrity leaves semantic support pending source review.
+The initial schema requires a first-viewport forecast. Later schemas require null. Ranges have unknown coverage, null confidence interval and `not_calibrated` status. Terminal interest/takeaway/revision is retrospective. Interest uses an authored, uncalibrated 1–5 rubric: 1 little relevance to the scoped role goal; 3 relevant without a clear next step; 5 a concrete research or workflow idea worth pursuing. KEEP is acceptable when evidence does not support an edit. It may cite encountered evidence IDs only. The executor attaches the complete supplied text fragment, or null for image/frame evidence. An ID cannot authorize quoting a neighboring or unseen paragraph. Citation integrity leaves semantic support pending source review.
 
 ## Stop rules and allowed labels
 
@@ -31,3 +31,5 @@ Finish requires the declared main closing paragraph to have reached the visibili
 The auditor reconstructs model-facing requests, raw action equality, source-fragment/rectangle checks, hashes, target availability, clock intervals, forecast origin, quote derivation and censoring. Only a successful audit of a live policy trace permits `verified_simulated_read_with_limits`. Authored policy traces receive `verified_authored_trace_not_a_simulated_read`, with zero provider/model calls. Failed or unaudited traces receive neither label.
 
 A passing audit supports mechanical validity under the recorded assumptions. Human predictive accuracy, semantic support, operating value and causal editorial effects require separate evidence.
+
+A separate read-only summary maps encountered citation IDs to private section metadata. It preserves failure, cap censoring and missing assignments; distinguishes reading, overlay inspection, playback, overlap and interaction; and leaves ambiguous multi-section time unallocated. It reports unique source intervals separately from replay time and sampled frames. Dwell does not establish interest, comprehension, reflection or confusion.

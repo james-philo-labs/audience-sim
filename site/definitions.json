@@ -1,0 +1,120 @@
+{
+  "metrics": [
+    {
+      "id": "termination",
+      "name": "Session termination",
+      "origin": "Executor event and audit",
+      "definition": "Finish, explicit abandon, action/time/wall/cost cap, or failure. Every assigned attempt remains in the denominator.",
+      "limit": "Finish requires closing exposure plus selected finish. Caps are censoring; errors are not disinterest.",
+      "study": "9 finishes; 0 abandonments, caps or failed sessions."
+    },
+    {
+      "id": "exit",
+      "name": "Early exit reason",
+      "origin": "Review annotation of explicit action/final rationale",
+      "definition": "Goal satisfied, lost interest, confused, irrelevant, technical blocker, or unknown, when an actual early exit occurs. Preserve the raw termination separately.",
+      "limit": "Do not infer motives from dwell, a rejected action, or a model claim about position.",
+      "study": "No early exits. Reason is not applicable; human motives are unmeasured."
+    },
+    {
+      "id": "interest",
+      "name": "Interest",
+      "origin": "Retrospective model self-rating, 1–5",
+      "definition": "Shared anchors: 1 little relevance; 3 relevant but no clear next step; 5 a concrete research/workflow idea worth pursuing. Retain the cited rationale.",
+      "limit": "An authored rubric, not a calibrated audience score. A model self-range is not a confidence interval.",
+      "study": "Eight ratings of 5 and one of 4.5; weak differentiation at the ceiling."
+    },
+    {
+      "id": "dwell",
+      "name": "Section dwell",
+      "origin": "Derived simulated intervals and visible section IDs",
+      "definition": "Allocate reading/playback to clearly identified sections; keep interaction overhead separate and subtract overlapping read/play time once. Ambiguous multi-section time stays unallocated.",
+      "limit": "Longer time may reflect interest, confusion or a policy choice. Exposure is not attention; zero section allocation does not prove a skip.",
+      "study": "One read/play overlap (4.049586 s), subtracted once. Multi-section dwell remains unallocated."
+    },
+    {
+      "id": "finish",
+      "name": "Finish time",
+      "origin": "Simulated active clock, conditional on audited natural finish",
+      "definition": "Read duration + playback advancement + authored interaction costs − overlapping read/play intervals. Partial reads receive no finish time. System wall time is a separate clock.",
+      "limit": "Not human reading time. Min–max across three contexts is descriptive model variation, not a confidence interval.",
+      "study": "82.90–240.06 simulated seconds. All below the assumed text-only 333.6–500.4 s scenarios; no calibration factor applied."
+    },
+    {
+      "id": "path",
+      "name": "Reading path",
+      "origin": "Ordered executor observations and actions",
+      "definition": "Record encountered section IDs, visible fragments, backtracks, skips and overlay transitions.",
+      "limit": "A viewport flash is not a completed paragraph. An overlay return does not automatically count as a backward revisit, reflection or confusion.",
+      "study": "Zero backward scrolls and zero seeks. Section paths are available for all nine sessions."
+    },
+    {
+      "id": "media",
+      "name": "Media use",
+      "origin": "Executed playback source intervals and sampled-frame timestamps",
+      "definition": "Total playback counts repeated intervals; unique source coverage unions them. A seek changes position without adding watched duration. Record source identity and available modalities.",
+      "limit": "Browser mode is muted and supplies sampled frames, not continuous native video or audio. Do not claim listening or visual understanding.",
+      "study": "Only visual-agent sessions played robot-tabletop portions: 7.04, 4.01 and 8.06 unique source seconds. Other clips unplayed."
+    },
+    {
+      "id": "forecast",
+      "name": "Probability forecast",
+      "origin": "Elicited model estimate, not an executor outcome",
+      "definition": "A session initial forecast uses only the first viewport; a separate whole-text forecast has broader access. Label those paths and conditions independently.",
+      "limit": "Not calculated by weighting text/video/audio consumption. No human calibration, population completion probability or causal comparison follows.",
+      "study": "Forecast probabilities are secondary and omitted from the default decision view. The primary results are audited terminations and cited feedback."
+    },
+    {
+      "id": "uncertainty",
+      "name": "Uncertainty",
+      "origin": "Repeated outputs, disagreements, evidence gaps and missing reference data",
+      "definition": "Show every attempt, individual values, failures, caps and assumptions. Calibrated confidence_interval stays null; coverage unknown; calibration_status not_calibrated.",
+      "limit": "Model self-ranges and repeated contexts do not establish human confidence coverage. Same-model role variation cannot rank real audience segments.",
+      "study": "3 repeats per role; 0 human outcomes; reader mismatches and prediction accuracy unavailable. No B or measured uplift."
+    }
+  ],
+  "enhancements": [
+    {
+      "topic": "Purpose and framing",
+      "status": "Changed presentation and editorial protocol",
+      "change": "Lead with KEEP / EDIT / INCONCLUSIVE and source-supported editorial consequences. KEEP is allowed; source-check a small candidate only when warranted.",
+      "limit": "This batch adds limited evidence beyond close editorial review. No candidate B was justified."
+    },
+    {
+      "topic": "Score transparency and calibration",
+      "status": "Changed rubric and reporting",
+      "change": "Shared interest anchors, a metric dictionary and separate model judgments, executor accounting and human measurement. Uncalibrated forecasts are secondary.",
+      "limit": "No composite engagement score or claim of calibrated completion probability."
+    },
+    {
+      "topic": "Accuracy validation",
+      "status": "Explicitly unresolved measurement",
+      "change": "Keep reader outcomes and prediction mismatches separate from software audits. Preserve a protocol for later independent reader checks.",
+      "limit": "No readers were collected in this experiment; accuracy and comprehension remain unmeasured. This is a reporting improvement, not validated prediction accuracy."
+    },
+    {
+      "topic": "Dwell and non-linear reading",
+      "status": "Existing actions; new read-only summaries",
+      "change": "Retain variable read duration, backtracking, skip, seek and early exit. Add section paths, separate clocks, unique playback coverage and overlap accounting.",
+      "limit": "Capabilities being available does not mean agents used them. This batch had no backward scrolls or seeks; dwell interpretation stays unknown without supporting evidence."
+    },
+    {
+      "topic": "Browser failure modes",
+      "status": "Control probes and bounded recovery",
+      "change": "Preflight article controls, add bounded broken-media metadata handling and clean RPC shutdown, retain rejected actions, and separate blockers from abandonments.",
+      "limit": "Two live policy state errors recovered in the original sessions. Neither exact signature recurred in a second assigned session; no failed run was retried away."
+    },
+    {
+      "topic": "Variance across agents",
+      "status": "Fixed repeats and scoped context",
+      "change": "Three independent contexts per each of three authored roles; selected-post allowlist prevents unrelated role overrides leaking into requests. Keep every attempt visible.",
+      "limit": "Same model alias and settings; no explicit seed, matched-seed trial, population weights or interviewed personas. Variation is descriptive."
+    },
+    {
+      "topic": "Article fidelity and AI edits",
+      "status": "Constrained rich layout and reviewed disposition",
+      "change": "Preserve paired images, tables, external labels, captions and claim boundaries in a frozen controlled article. Review cited feedback before applying any edit.",
+      "limit": "Source reconciliation happened before inference. Citation integrity does not establish semantic support; KEEP adds no article claim."
+    }
+  ]
+}

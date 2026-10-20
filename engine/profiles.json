@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "authored_on": "2026-10-13",
   "population_weights": null,
   "profiles": [
@@ -26,7 +26,18 @@
         "Visual polish substituted for task evidence"
       ],
       "version": "0.1",
-      "evidence_status": "authored archetype; not an interviewed individual or representative population"
+      "evidence_status": "authored archetype; not an interviewed individual or representative population",
+      "post_overrides": {
+        "3dcodeverse": {
+          "reading_goal": "Decide whether executable 3D representations offer a useful idea for spatial reasoning and inspection research.",
+          "prior_knowledge": "Understands multimodal and spatial reasoning research, programmatic 3D representations and evaluation design. Has not read this article or its source paper and has no privileged access to the artifacts.",
+          "interests": [
+            "Executable spatial representations and editable geometry",
+            "Inspection of visual and structural behavior",
+            "Evidence connecting a research idea to a reproducible investigation"
+          ]
+        }
+      }
     },
     {
       "id": "post-training-engineer",
@@ -51,7 +62,18 @@
         "Repeated conceptual framing without a usable next action"
       ],
       "version": "0.1",
-      "evidence_status": "authored archetype; not an interviewed individual or representative population"
+      "evidence_status": "authored archetype; not an interviewed individual or representative population",
+      "post_overrides": {
+        "3dcodeverse": {
+          "reading_goal": "Decide whether code, checks and repair records suggest a training or evaluation artifact worth investigating, and what evidence is available for doing so.",
+          "prior_knowledge": "Understands data pipelines, supervised fine-tuning, preference optimization and verifier failure modes. Has not read this article or its source paper and does not assume that a recorded trace establishes training benefit.",
+          "interests": [
+            "Program and feedback records for training or evaluation",
+            "Data provenance and reproducible implementation paths",
+            "Evidence for downstream effects and the work needed to investigate them"
+          ]
+        }
+      }
     },
     {
       "id": "evaluation-researcher",
@@ -86,8 +108,18 @@
             "Rendered artifacts versus text-described probes and judge access to diagnostic information",
             "Raw grading provenance, selected rewrites, valid alternatives and missing source evidence"
           ]
+        },
+        "3dcodeverse": {
+          "reading_goal": "Decide which reported comparisons are interpretable and auditable, and what remains uncertain.",
+          "prior_knowledge": "Understands construct validity, evaluation design, sampling and model or human judgments. Has not read this article or its source paper and has no access to unprovided evaluation records.",
+          "interests": [
+            "Interpretable comparisons and reference quality",
+            "Task definitions, denominators and information access",
+            "Evidence sufficiency, uncertainty and alternative explanations"
+          ]
         }
       }
     }
-  ]
+  ],
+  "updated_on": "2026-10-20"
 }

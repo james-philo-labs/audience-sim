@@ -237,6 +237,8 @@ function py(...args) {
   }
   // Full authored-policy trace through the same request contract and independent auditor.
   py("engine/session/session_reader.py", "fixture-run", "--out", prepared);
+  assert(!fs.existsSync(path.join(prepared, "browser-close-error.json")));
+  checks.push("Authored session RPC shuts down without a close timeout");
   const audit = JSON.parse(py("engine/session/audit.py", "--out", prepared));
   assert.equal(audit.status, "verified_authored_trace_not_a_simulated_read");
   assert.equal(audit.provider_calls, 0);
@@ -257,6 +259,8 @@ function py(...args) {
     "1",
   );
   py("engine/session/session_reader.py", "fixture-run", "--out", capped);
+  assert(!fs.existsSync(path.join(capped, "browser-close-error.json")));
+  checks.push("Capped session RPC shuts down without a close timeout");
   const capAudit = JSON.parse(py("engine/session/audit.py", "--out", capped));
   assert(
     capAudit.cap_censored &&

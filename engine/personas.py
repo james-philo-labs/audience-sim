@@ -1,9 +1,9 @@
-"""persona-scope-0.2: project only approved base fields and the selected post override."""
+"""Project only approved base fields and the selected post override."""
 
 from copy import deepcopy
 
-VERSION = "persona-scope-0.2"
-POSTS = frozenset({"example", "opus", "gdpval", "omni"})
+VERSION = "persona-scope-0.3"
+POSTS = frozenset({"example", "opus", "gdpval", "omni", "3dcodeverse"})
 FIELDS = (
     "id",
     "name",

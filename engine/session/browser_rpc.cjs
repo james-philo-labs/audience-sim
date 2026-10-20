@@ -401,11 +401,22 @@ class Executor {
         );
         await this.page.locator("#session-player").evaluate(async (e) => {
           if (e.tagName === "IMG") await e.decode();
-          else if (e.readyState < 1)
+          else if (e.readyState < 1) {
+            if (e.error) throw Error("Media decode failed");
             await new Promise((resolve, reject) => {
-              e.onloadedmetadata = resolve;
-              e.onerror = () => reject(Error("Media decode failed"));
+              const finish = (error) => {
+                clearTimeout(timer);
+                e.removeEventListener("loadedmetadata", loaded);
+                e.removeEventListener("error", failed);
+                error ? reject(error) : resolve();
+              };
+              const loaded = () => finish();
+              const failed = () => finish(Error("Media decode failed"));
+              const timer = setTimeout(() => finish(Error("Media metadata timeout")), 5000);
+              e.addEventListener("loadedmetadata", loaded, { once: true });
+              e.addEventListener("error", failed, { once: true });
             });
+          }
         });
       } else if (a.action === "close_media") {
         if (!before.overlay || target.kind !== "close_media")
@@ -532,6 +543,7 @@ if (require.main === module) {
         else if (cmd.command === "close") {
           await ex.close();
           console.log(JSON.stringify({ ok: true }));
+          process.stdin.destroy();
           break;
         } else throw Error("Unknown RPC command");
         console.log(JSON.stringify({ ok: true, value }));

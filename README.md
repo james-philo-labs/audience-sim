@@ -2,18 +2,27 @@
 
 [![Offline contracts and browser boundaries](https://github.com/james-philo-labs/audience-sim/actions/workflows/ci.yml/badge.svg)](https://github.com/james-philo-labs/audience-sim/actions/workflows/ci.yml)
 
-An inspectable prototype for a small editorial decision: choose between two article treatments, examine persona-specific forecasts and their evidence, then decide what to test with real readers.
+An inspectable prototype for a small editorial decision: keep a draft or consider a source-supported edit. Inspect role-specific evidence, separate model judgments from executor outcomes, and state what remains unmeasured.
 
-[Explore the recorded demo](https://philo-audience-lab.vercel.app) · [Compare the articles](https://philo-audience-lab.vercel.app/compare.html) · [System design](docs/architecture.md) · [Recorded case study](docs/case-study.md)
+[Explore the 3DCodeVerse study](https://philo-audience-lab.vercel.app) · [Earlier Opus replay](https://philo-audience-lab.vercel.app/opus.html) · [Compare the Opus articles](https://philo-audience-lab.vercel.app/compare.html) · [System design](docs/architecture.md) · [Recorded case study](docs/case-study.md)
 
 ![Architecture: frozen article and scoped persona feed separate inspection and bounded-session paths; every output retains exposure, provenance and uncertainty.](docs/architecture.svg)
 
 The unit is **one article × one authored persona × one declared condition**. A persona is a hypothesis about a role, not an interviewed individual or a population estimate. Predictions carry elicited ranges with unknown coverage. Statistical confidence intervals stay `null` until real-reader data support calibration.
 
+## Latest study: 3DCodeVerse
+
+**KEEP the source-reconciled baseline A.** All nine assigned browser sessions were attempted and audited (three per authored role); all finished and recommended KEEP. Two rejected policy actions recovered in their original sessions. No new source-supported edit or B rerun was warranted. Human outcomes: **0**, collection excluded; accuracy, comprehension and calibrated probabilities remain unmeasured.
+
+[All nine outcomes and evidence limits](docs/3dcodeverse-study.md) · [Design enhancements](docs/design-enhancements.md) · [Nine metric definitions](docs/metrics.md) · [JSON](results/3dcodeverse-2026-10-20/study.json) · [CSV](results/3dcodeverse-2026-10-20/runs.csv)
+
+The release adds selected-post scope, constrained rich layout, shared interest anchors, bounded media recovery and read-only path/clock summaries. Variable dwell, backtracking, skip, seeking and early exit were existing capabilities. Reader validation is an explicit open question, not a capability certified by software tests. The static `site/` source powers the new public study view; the existing Opus replay and article readers remain separate hosted history. Visitors trigger no inference.
+
 ## What this repository contains
 
 - A text/selected-still forecast CLI that freezes its article, scoped persona, prompt, schema, model settings and request.
 - An isolated browser session executor, derived from runtime 0.4: bounded actions, future-content withholding, evidence IDs, executor-derived quotes, separate clocks and an independent trace auditor.
+- Read-only JSON/CSV trace summaries with section paths, replay coverage, failure and cap visibility, and explicit authored-fixture labels.
 - Local bundle preparation, timing-checked GIF playback representations, and native-media observation probes with explicit audio policy.
 - A whole-article inspection schema and per-citation validator. Provider-specific comparison orchestration remains outside this compact release; the [design](docs/architecture.md) explains how it fits.
 - Tiny authored articles/media, offline tests, browser probes, and a public-safe summary of the recorded two-treatment study, including exclusions and a failed run.
@@ -60,17 +69,18 @@ The expected audit status is `verified_authored_trace_not_a_simulated_read`, wit
 
 The browser session is **muted**, with motion activated on request. Native observer audio access does not silently carry into that session. A citation can be structurally valid and still fail to support a claim.
 
-## What the recorded case taught us
+## What the earlier Opus case taught us
 
 The visual-agent full-text forecast favored treatment B on completion likelihood. A separate bounded reading trace finished A and abandoned B. The methods exposed different content; neither establishes a causal treatment effect. Two initial evaluation-researcher forecasts were excluded for a wrong-scope persona input. A separately declared scope repair produced a new pair; it did not rehabilitate the excluded outputs.
 
-The editor preferred B. **Measured real-reader outcomes: zero.** The next proposed measurement is a 24-reader diagnostic, balanced within three roles and randomized within role. It is not a powered efficacy trial or a calibration certificate. [Results, failure cases and measurement plan →](docs/case-study.md)
+The editor preferred B. **Measured real-reader outcomes: zero.** That case proposed a 24-reader diagnostic, balanced within three roles and randomized within role. It was not run and is not a powered efficacy trial or a calibration certificate. The later 3DCodeVerse study excluded reader collection. [Results, failure cases and measurement plan →](docs/case-study.md)
 
 ## Inspect and contribute
 
 ```sh
 npm test                 # deterministic Python tests; transport is mocked
 npm run test:browser     # real local Chromium; authored policy only
+npm run test:study       # new static study UI, all nine runs, metrics and mobile reflow
 npm run check:public     # release inventory, links, size and sensitive-content checks
 ```
 

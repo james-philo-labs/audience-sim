@@ -1,3 +1,7 @@
+# Public package 0.2
+
+Adds selected-post role scope, constrained paired-image/table/callout formatting and inline emphasis/HTTPS links, explicit interest anchors, bounded broken-media metadata recovery and clean RPC shutdown, and read-only section/clock summaries. These changes have offline software tests. They do not validate human predictions, provider compatibility or editorial improvement. The public study view now presents the recorded nine-run 3DCodeVerse result; the earlier Opus replay remains separate at `/opus.html`. Added a metric dictionary, explicit feedback-to-design mapping, public-safe JSON/CSV and static study UI source. No raw article/media or requests are included. Human validation remains unmeasured, and publishing the results makes no new provider calls.
+
 # Public package 0.1
 
 This is a separately versioned portable derivative. The historical text harness 0.2, native observer 0.1, persona-scope fix 0.2 and browser session runtime 0.4 informed the selected source. The public package does not rename itself historical runtime 0.4.

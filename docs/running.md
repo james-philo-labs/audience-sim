@@ -6,7 +6,7 @@ All commands run from the repository root. Python uses the standard library. The
 
 The [README](../README.md) contains the text and browser quick starts. `npm test` exercises schemas, quotation checks, persona scoping, forecast origin, clocks and error handling with authored/mocked responses. `npm run test:browser` creates a fresh temporary bundle, runs real browser probes and an audited scripted trace, without submitting provider requests.
 
-The example article JSON has `id`, `version`, `title`, `main_end_id` and ordered `blocks`. Blocks are `heading`, `paragraph`, `image`, `animation`, `video` or `details`, with unique simple IDs. Media references must resolve inside the article directory. Text is escaped; arbitrary HTML, JavaScript and remote embeds are not accepted. The main-end ID must identify a paragraph. Optional methods follow it.
+The example article JSON has `id`, `version`, `title`, `main_end_id` and ordered `blocks`. Blocks are `heading`, `paragraph`, `image`, `animation`, `video`, `details`, `image_group`, `table` or `callout`, with unique simple IDs. Paragraphs and captions may carry escaped inline `strong`, `em` and HTTPS-link annotations whose concatenated text must match the declared plain text exactly. Paired images share a caption; table cells have individual citation IDs. A labelled callout can contain paragraphs and local media. `cover_block_id` puts an opening image before the title. Section metadata is private summary input; it is not an inventory supplied to the session reader. Media references must resolve inside the article directory. Text is escaped; arbitrary HTML, JavaScript and remote embeds are not accepted. The main-end ID must identify a paragraph. Optional methods follow it.
 
 Use `examples/article-b.json` for a second authored treatment. Both examples are unrelated to the recorded historical article: their media are test patterns and their numerical fixture values are arbitrary.
 
@@ -73,3 +73,23 @@ Generated directories are ignored by Git. They can contain your article and medi
 Playwright's normal installed Chromium is used by default. `BUNDLE_CHROMIUM_PATH` can explicitly select a local Chromium executable. `NODE_BINARY` can select Node; `AUDIENCE_NODE_MODULES` can select a dependency directory. None is hard-coded to a workstation path. Native browser tests need permission to launch Chromium and bind a local-only server.
 
 If a command fails, retain the output and its status, resolve the cause, then use a new directory. A fixture success is never a provider integration test or a calibrated reader prediction.
+
+## Scoped sessions and trace summaries
+
+Select the post explicitly with `--post 3dcodeverse` (or another supported post) and `--persona visual-agent-researcher`, `post-training-engineer` or `evaluation-researcher`. Only the selected post's approved role goal, knowledge and interests are projected. Inspect `persona-scope.json`; other post overrides are withheld. Article-specific media and text belong in your local bundle, not this public package.
+
+After auditing all assigned runs, including failures and censored attempts, generate a separate read-only report:
+
+```sh
+python3 engine/session/summary.py --runs runs/session-a runs/session-b --out runs/summary-v1
+```
+
+The JSON and CSV files retain assigned denominators, raw terminations, technical events, section visits and backtracking, read/play overlap, interaction time and sampled source intervals. Multi-section time stays unallocated when attribution is ambiguous. An absent assigned path remains an unknown/missing row. Replays add playback time but unique source coverage uses interval union. A browser source interval does not mean the model watched every frame or heard audio.
+
+The summary does not infer disinterest from failures, reflection from a long dwell, or a population completion probability from a few role traces. Interest is an uncalibrated retrospective rubric: 1 = little relevance to the role's goal, 3 = relevant without a clear next step, 5 = a concrete research or workflow idea worth pursuing. A supported KEEP is acceptable. An audited live natural finish alone receives a simulated conditional finish time. Authored clocks and ratings remain labelled software test data; cap censoring never becomes abandonment or a finish.
+
+## Recorded 3DCodeVerse study view
+
+`site/` contains the public study UI and selected JSON/CSV, with no inference backend. Preview it with `python3 -m http.server 4173 --directory site`, then open `http://localhost:4173`. The hosted `/opus.html` route belongs to the separately preserved historical app; its article/media payload is not vendored here.
+
+Run `npm run test:study` after installing Chromium. Like the executor, the UI test accepts `BUNDLE_CHROMIUM_PATH` for an explicitly selected local executable. Set `STUDY_URL` to check a deployed site and `STUDY_REPORT_DIR` for screenshots/report output outside the public inventory. No provider credentials are required.

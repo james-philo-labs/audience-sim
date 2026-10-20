@@ -1,0 +1,10 @@
+cell_id,role,repetition,termination,interest,simulated_active_seconds,wall_seconds,provider_calls,technical_events,revision
+a-visual-01,visual-agent-researcher,1,finish,4.5,142.544475,186.68,31,0,KEEP
+a-visual-02,visual-agent-researcher,2,finish,5,225.20573,237.14,36,0,KEEP
+a-visual-03,visual-agent-researcher,3,finish,5,240.058711,228.241,35,0,KEEP
+a-posttraining-01,post-training-engineer,1,finish,5,82.9,145.116,25,1,KEEP
+a-posttraining-02,post-training-engineer,2,finish,5,112.9,135.769,22,0,KEEP
+a-posttraining-03,post-training-engineer,3,finish,5,236.9,176.963,29,0,KEEP
+a-evaluation-01,evaluation-researcher,1,finish,5,136.4,89.926,21,0,KEEP
+a-evaluation-02,evaluation-researcher,2,finish,5,196.9,132.742,26,0,KEEP
+a-evaluation-03,evaluation-researcher,3,finish,5,129.1,148.512,28,1,KEEP

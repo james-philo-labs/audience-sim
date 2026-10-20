@@ -22,4 +22,5 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm test
       - run: npm run test:browser
+      - run: npm run test:study
       - run: npm run check:public

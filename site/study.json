@@ -1,0 +1,2158 @@
+{
+  "schema_version": "public-study-1",
+  "study_id": "3dcodeverse-2026-10-20",
+  "title": "From a Prompt to an Inspectable 3D Program",
+  "date": "2026-10-20",
+  "decision": "KEEP",
+  "decision_scope": "Retain source-reconciled baseline A for the local editorial decision; publication approval is separate.",
+  "baseline_sha256": "996d6795caf316e053f60fc460fa3464ef05784c56e42e0b13d753a4840c3279",
+  "source": {
+    "paper": "https://arxiv.org/abs/2610.22341v1",
+    "version": "Public arXiv v1; 34-page source pinned before the runs",
+    "pre_simulation_corrections": 14
+  },
+  "condition": {
+    "model": "gpt-6-luna",
+    "reasoning": "low",
+    "viewport": [
+      1440,
+      900
+    ],
+    "audio": "muted",
+    "motion": "on request; sampled frames only",
+    "seed": null,
+    "temperature": null,
+    "immutable_model_snapshot": null,
+    "max_decisions": 48,
+    "simulated_seconds_cap": 600,
+    "wall_seconds_cap": 900,
+    "estimated_usd_guard_per_run": 1,
+    "automatic_retries": 0,
+    "layout": "Controlled article representation; cover, seven body images, three videos; not a tested CMS replica"
+  },
+  "accounting": {
+    "assigned": 9,
+    "attempted": 9,
+    "audited": 9,
+    "finished": 9,
+    "abandoned": 0,
+    "capped": 0,
+    "failed": 0,
+    "pending": 0,
+    "keep": 9,
+    "rejected_actions": 2,
+    "pilot_excluded": true,
+    "offline_fixture_excluded": true,
+    "human_outcomes": 0
+  },
+  "validation": {
+    "calibration_status": "not_calibrated",
+    "confidence_interval": null,
+    "coverage": "unknown",
+    "human_reader_comparison": "not assessed; collection excluded",
+    "reader_mismatches": null,
+    "prediction_accuracy": null,
+    "completion_probability": null,
+    "candidate_b": false,
+    "causal_uplift": null
+  },
+  "cost": {
+    "main_known_usd": 1.13577409,
+    "pilot_usd": 0.1310512,
+    "total_known_usd": 1.26682529,
+    "unknown_usage_turns": 0,
+    "main_calls": 253,
+    "pilot_calls": 29,
+    "all_guard_estimate_usd": 2.530242,
+    "invoice_status": "not_observed",
+    "currency": "USD",
+    "scope": "Recorded published-rate estimates from returned harness usage. Excludes conversation/research tools and labor; no invoice observed.",
+    "main_runtime_seconds": 1481.089,
+    "pilot_runtime_seconds": 236.572,
+    "human_active_effort_seconds": null,
+    "total_operating_cost_usd": null,
+    "new_inference_for_publication": 0
+  },
+  "review": {
+    "findings_reviewed": 18,
+    "citation_references_reviewed": 62,
+    "citation_integrity_passed": true,
+    "reviewer": "Codex assistant; not independent human adjudication",
+    "recurrence_rule": "Two of three within a role is a review heuristic, not statistical confidence.",
+    "recurring_supported_edit_issues": [],
+    "takeaway_sets_using_closing": 8,
+    "reason": "No new source-supported correction or recurring edit-worthy friction. Most findings repeat existing evidence limits; incremental editorial value over close review remains unproven."
+  },
+  "runs": [
+    {
+      "cell_id": "a-visual-01",
+      "role": "visual-agent-researcher",
+      "repetition": 1,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 4.5,
+      "interest_self_range": [
+        4.0,
+        5.0
+      ],
+      "simulated_active_seconds": 142.544475,
+      "wall_seconds": 186.68,
+      "provider_calls": 31,
+      "cost_estimate_usd": 0.14773727,
+      "clock": {
+        "simulated_active_seconds": 142.544475,
+        "reading_seconds": 119,
+        "playback_seconds": 7.044475,
+        "interaction_seconds": 16.5,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 7,
+        "scroll_next": 14,
+        "inspect_image": 3,
+        "close_media": 3,
+        "play": 2,
+        "finish": 1
+      },
+      "media": [
+        {
+          "asset_id": "asset-ee80d46ba6cf",
+          "play_intervals": [
+            [
+              0.0,
+              3.992251
+            ],
+            [
+              3.992251,
+              7.044475
+            ]
+          ],
+          "total_playback_source_seconds": 7.044475,
+          "unique_playback_source_seconds": 7.044475,
+          "sampled_frame_source_times": [
+            0.955462,
+            2.001649,
+            3.04666,
+            3.952411,
+            5.006498,
+            6.053091,
+            7.004901
+          ],
+          "meaning": "Browser source advancement; model saw only sampled frames, not continuous video or audio."
+        }
+      ],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 84.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 84.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 35.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 35.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 7.044475,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 7.044475
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A practical experiment would define a bounded asset brief with a measurable condition, preserve the program, checks, and repair history, and compare the resulting workflow with current practice—including human repair and integration costs.",
+      "model_revision": "KEEP. The encountered discussion already distinguishes execution from geometry matching and frames production acceptance and cost savings as open tests.",
+      "review_qualification": "Retain baseline while other role cells complete; no source correction or edit acceptance follows from this trace alone.",
+      "takeaway_source_blocks": [
+        "closing-p-002"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-visual-02",
+      "role": "visual-agent-researcher",
+      "repetition": 2,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 225.20573,
+      "wall_seconds": 237.14,
+      "provider_calls": 36,
+      "cost_estimate_usd": 0.200629425,
+      "clock": {
+        "simulated_active_seconds": 225.20573,
+        "reading_seconds": 205,
+        "playback_seconds": 4.00573,
+        "interaction_seconds": 16.2,
+        "overlap_seconds": -0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 13,
+        "scroll_next": 14,
+        "inspect_image": 2,
+        "close_media": 3,
+        "open_media": 1,
+        "play": 1,
+        "finish": 1
+      },
+      "media": [
+        {
+          "asset_id": "asset-ee80d46ba6cf",
+          "play_intervals": [
+            [
+              0.0,
+              4.00573
+            ]
+          ],
+          "total_playback_source_seconds": 4.00573,
+          "unique_playback_source_seconds": 4.00573,
+          "sampled_frame_source_times": [
+            0.967079,
+            2.022632,
+            3.064704,
+            3.96985
+          ],
+          "meaning": "Browser source advancement; model saw only sampled frames, not continuous video or audio."
+        }
+      ],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 174.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": -0.0,
+          "active_content_seconds": 174.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 31.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 31.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 4.00573,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 4.00573
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A practical evaluation could start with a bounded brief and a condition that can fail, then compare the workflow against current practice while accounting for repair, compute, integration, rights, and final acceptance.",
+      "model_revision": "KEEP. The encountered discussion already distinguishes measurable checks from human approval and frames the reported results as evidence for further tests rather than proof of production benefit.",
+      "review_qualification": "KEEP; no new source-supported issue requiring an edit.",
+      "takeaway_source_blocks": [
+        "closing-p-002"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-visual-03",
+      "role": "visual-agent-researcher",
+      "repetition": 3,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        5,
+        5
+      ],
+      "simulated_active_seconds": 240.058711,
+      "wall_seconds": 228.241,
+      "provider_calls": 35,
+      "cost_estimate_usd": 0.185583375,
+      "clock": {
+        "simulated_active_seconds": 240.058711,
+        "reading_seconds": 218.049586,
+        "playback_seconds": 8.058711,
+        "interaction_seconds": 18.0,
+        "overlap_seconds": 4.049586,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 9,
+        "inspect_image": 4,
+        "close_media": 4,
+        "scroll_next": 14,
+        "play": 1,
+        "read_while_playing": 1,
+        "finish": 1
+      },
+      "media": [
+        {
+          "asset_id": "asset-ee80d46ba6cf",
+          "play_intervals": [
+            [
+              0.0,
+              4.009125
+            ],
+            [
+              4.009125,
+              8.058711
+            ]
+          ],
+          "total_playback_source_seconds": 8.058711,
+          "unique_playback_source_seconds": 8.058711,
+          "sampled_frame_source_times": [
+            0.954022,
+            2.003798,
+            3.05769,
+            3.95636,
+            5.025519,
+            6.070637,
+            7.121065,
+            8.027296
+          ],
+          "meaning": "Browser source advancement; model saw only sampled frames, not continuous video or audio."
+        }
+      ],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 3,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 170.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 170.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 20.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 20.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 4.049586,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 8.058711,
+          "overlap_seconds": 4.049586,
+          "active_content_seconds": 8.058711
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 24.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 24.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A practical pilot could compare an existing workflow with a bounded, evidence-retaining loop: set a requirement that can fail, inspect structural and visual evidence, record targeted repairs, and account for human repair and integration work.",
+      "model_revision": "KEEP: the encountered material clearly distinguishes execution from geometry fidelity and rendered-comparison preferences from production acceptance, while proposing a concrete workflow test.",
+      "review_qualification": "KEEP frozen baseline; no local edit warranted by this trace.",
+      "takeaway_source_blocks": [
+        "closing-p-002",
+        "loop-p-004"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-posttraining-01",
+      "role": "post-training-engineer",
+      "repetition": 1,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 82.9,
+      "wall_seconds": 145.116,
+      "provider_calls": 25,
+      "cost_estimate_usd": 0.097505375,
+      "clock": {
+        "simulated_active_seconds": 82.9,
+        "reading_seconds": 68,
+        "playback_seconds": 0,
+        "interaction_seconds": 14.9,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 4,
+        "scroll_next": 14,
+        "inspect_image": 2,
+        "close_media": 3,
+        "finish": 1
+      },
+      "media": [],
+      "rejected_actions": 1,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 48.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 48.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 20.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 20.0
+        },
+        {
+          "section_id": "training",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A promising pilot would compare the inspect-and-repair loop with the current workflow on a bounded brief, tracking whether declared requirements pass and what human repair, compute, and integration work remains.",
+      "model_revision": "KEEP. The encountered results distinguish execution from geometry fidelity, and explicitly limit the workflow-comparison claim; no supported edit is needed.",
+      "review_qualification": "KEEP as a preliminary model preference; do not infer empirical post-training utility or edit acceptance.",
+      "takeaway_source_blocks": [
+        "closing-p-002"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-posttraining-02",
+      "role": "post-training-engineer",
+      "repetition": 2,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 112.9,
+      "wall_seconds": 135.769,
+      "provider_calls": 22,
+      "cost_estimate_usd": 0.07485531,
+      "clock": {
+        "simulated_active_seconds": 112.9,
+        "reading_seconds": 100,
+        "playback_seconds": 0,
+        "interaction_seconds": 12.9,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 4,
+        "scroll_next": 14,
+        "inspect_image": 1,
+        "close_media": 1,
+        "finish": 1
+      },
+      "media": [],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 100.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 100.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A promising pilot would define a falsifiable asset requirement in advance, preserve the evidence and repair history, and compare the workflow with the existing process—including human repair and integration—rather than treating a good-looking render as a pass.",
+      "model_revision": "KEEP. The encountered material already distinguishes measurable checks from human judgment and explicitly frames the workflow and results as hypotheses to test, not established production benefits.",
+      "review_qualification": "KEEP baseline; do not reuse the broad results-as-hypotheses wording.",
+      "takeaway_source_blocks": [
+        "closing-p-002",
+        "stool-p-004"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-posttraining-03",
+      "role": "post-training-engineer",
+      "repetition": 3,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 236.9,
+      "wall_seconds": 176.963,
+      "provider_calls": 29,
+      "cost_estimate_usd": 0.127517575,
+      "clock": {
+        "simulated_active_seconds": 236.9,
+        "reading_seconds": 224,
+        "playback_seconds": 0,
+        "interaction_seconds": 12.9,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 11,
+        "scroll_next": 14,
+        "inspect_image": 1,
+        "close_media": 1,
+        "finish": 1
+      },
+      "media": [],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 146.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 146.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 78.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 78.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "Keep structural checks and visual review distinct, and keep their evidence and repair history with the artifact; a better-looking or more executable result can still miss a declared requirement.",
+      "model_revision": "KEEP. The encountered explanations distinguish reported execution results from geometry fidelity and appropriately qualify the workflow-comparison result, so no supported edit is needed based on this trace.",
+      "review_qualification": "KEEP baseline, no edit warranted by this response; caveat the model rationale.",
+      "takeaway_source_blocks": [
+        "loop-p-004",
+        "stool-p-004"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-evaluation-01",
+      "role": "evaluation-researcher",
+      "repetition": 1,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 136.4,
+      "wall_seconds": 89.926,
+      "provider_calls": 21,
+      "cost_estimate_usd": 0.07103455,
+      "clock": {
+        "simulated_active_seconds": 136.4,
+        "reading_seconds": 125,
+        "playback_seconds": 0,
+        "interaction_seconds": 11.4,
+        "overlap_seconds": -0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 5,
+        "scroll_next": 14,
+        "finish": 1
+      },
+      "media": [],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 100.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": -0.0,
+          "active_content_seconds": 100.0
+        },
+        {
+          "section_id": "program",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 25.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 25.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A practical test could compare this evidence-linked build-and-repair loop with an existing workflow on a bounded brief, including repair effort and final acceptance—not just render quality.",
+      "model_revision": "KEEP. The encountered sections distinguish execution from geometry fidelity, describe the reported comparisons with caveats, and identify production acceptance and cost as future tests.",
+      "review_qualification": "Retain baseline for this preliminary stage; no supported model-proposed correction or novel evaluation-specific blocker identified.",
+      "takeaway_source_blocks": [
+        "closing-p-002"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-evaluation-02",
+      "role": "evaluation-researcher",
+      "repetition": 2,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        4,
+        5
+      ],
+      "simulated_active_seconds": 196.9,
+      "wall_seconds": 132.742,
+      "provider_calls": 26,
+      "cost_estimate_usd": 0.10635756,
+      "clock": {
+        "simulated_active_seconds": 196.9,
+        "reading_seconds": 184,
+        "playback_seconds": 0,
+        "interaction_seconds": 12.9,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 8,
+        "scroll_next": 14,
+        "inspect_image": 1,
+        "close_media": 1,
+        "finish": 1
+      },
+      "media": [],
+      "rejected_actions": 0,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 18.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 18.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 121.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 121.0
+        },
+        {
+          "section_id": "program",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 45.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 45.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A useful pilot would define a failure-capable requirement before generation, then retain the source, checks, views, and repair history so the result can be assessed beyond its render.",
+      "model_revision": "KEEP: the encountered explanation already distinguishes checks from human acceptance and frames a bounded workflow comparison as a practical test.",
+      "review_qualification": "KEEP. No supported local edit surfaced.",
+      "takeaway_source_blocks": [
+        "closing-p-002",
+        "training-p-004"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    },
+    {
+      "cell_id": "a-evaluation-03",
+      "role": "evaluation-researcher",
+      "repetition": 3,
+      "termination": "finish",
+      "early_exit_reason": null,
+      "interest": 5,
+      "interest_self_range": [
+        5,
+        5
+      ],
+      "simulated_active_seconds": 129.1,
+      "wall_seconds": 148.512,
+      "provider_calls": 28,
+      "cost_estimate_usd": 0.12455365,
+      "clock": {
+        "simulated_active_seconds": 129.1,
+        "reading_seconds": 116,
+        "playback_seconds": 0,
+        "interaction_seconds": 13.1,
+        "overlap_seconds": 0.0,
+        "timing_status": "authored_simulation_not_human_measurement"
+      },
+      "actions": {
+        "read": 9,
+        "scroll_next": 14,
+        "inspect_image": 1,
+        "close_media": 1,
+        "finish": 2
+      },
+      "media": [],
+      "rejected_actions": 1,
+      "reading_path": [
+        [
+          "opening",
+          "stool"
+        ],
+        [
+          "stool"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "media overlay"
+        ],
+        [
+          "program",
+          "stool"
+        ],
+        [
+          "program"
+        ],
+        [
+          "loop",
+          "program"
+        ],
+        [
+          "loop"
+        ],
+        [
+          "loop",
+          "training"
+        ],
+        [
+          "results",
+          "training"
+        ],
+        [
+          "applications",
+          "results"
+        ],
+        [
+          "applications"
+        ],
+        [
+          "applications",
+          "limits"
+        ],
+        [
+          "limits"
+        ],
+        [
+          "closing",
+          "limits"
+        ]
+      ],
+      "sections": [
+        {
+          "section_id": "stool",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "opening",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "unallocated",
+          "visits": 0,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 74.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 74.0
+        },
+        {
+          "section_id": "program",
+          "visits": 2,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "loop",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 42.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 42.0
+        },
+        {
+          "section_id": "training",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "results",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "applications",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "limits",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        },
+        {
+          "section_id": "closing",
+          "visits": 1,
+          "backtrack_revisits": 0,
+          "skip_actions": 0,
+          "reading_seconds": 0.0,
+          "overlay_inspection_seconds": 0.0,
+          "playback_seconds": 0.0,
+          "overlap_seconds": 0.0,
+          "active_content_seconds": 0.0
+        }
+      ],
+      "takeaway": "A useful experiment is to define a falsifiable condition before generating an asset, then compare the workflow using both verification results and the human work needed for repair and acceptance.",
+      "model_revision": "KEEP. The encountered discussion already distinguishes execution from geometry matching and frames the reported workflow comparison as rendered-comparison evidence, not production acceptance or a matched-compute comparison.",
+      "review_qualification": "KEEP baseline. No novel supported edit; retain precise source/result labels in any handoff.",
+      "takeaway_source_blocks": [
+        "closing-p-002"
+      ],
+      "reported_confusing_claims": 0,
+      "nominated_dropoff": null,
+      "audit_status": "verified_simulated_read_with_limits"
+    }
+  ],
+  "limitations": [
+    "Authored role profiles, not sampled people.",
+    "Executor audit establishes exposure and accounting, not semantic truth or human comprehension.",
+    "Interest is a retrospective model rating, not a calibrated audience score.",
+    "Media coverage is source advancement plus sampled frames, not continuous viewing or listening.",
+    "All finish clocks fall below 333.6–500.4 seconds from assumed 300–200 WPM scenarios; no human reference or correction factor.",
+    "No B was created; no A/B treatment effect can be estimated.",
+    "Public derivative omits full draft/media, raw requests, private operational records and local identifiers. Independent replay of the original live calls is not possible from this summary alone."
+  ],
+  "framing": [
+    {
+      "role": "visual-agent-researcher",
+      "text": "Executable geometry makes requirements and failures inspectable beyond a render."
+    },
+    {
+      "role": "post-training-engineer",
+      "text": "Code, checks and repair histories are candidate training material; held-out learning benefit needs a separate test."
+    },
+    {
+      "role": "evaluation-researcher",
+      "text": "A successful build or high score can still miss a declared requirement; checks and human acceptance remain distinct."
+    }
+  ],
+  "manual_comparison": [
+    {
+      "concern": "Practical next step and artifact access",
+      "result": "Most model responses identify a conceptual experiment from the closing. Off-site code/dataset discovery was not tested.",
+      "disposition": "KEEP; narrower access concern remains untested."
+    },
+    {
+      "concern": "Mechanism, training material and evidence types",
+      "result": "Takeaways retain checks and repairs; some model rationales loosely describe rendered comparisons as workflow results or reported observations as hypotheses.",
+      "disposition": "KEEP precise draft qualifiers; do not copy loose model rationales."
+    },
+    {
+      "concern": "Applications and external-clip relevance",
+      "result": "No edit nominated. Only the visual-agent sessions play part of the robot clip; butterfly and external poker clip are unplayed.",
+      "disposition": "KEEP; relevance and provenance comprehension remain untested."
+    }
+  ],
+  "blockers": [
+    {
+      "cell_id": "a-posttraining-01",
+      "action_index": 14,
+      "action": "close_media",
+      "error": "Target not currently visible/available",
+      "interaction_seconds": 0.5,
+      "reading_seconds": 0,
+      "playback_seconds": 0,
+      "recovery": "Next scroll succeeded in the original session; absent overlay was not an article failure."
+    },
+    {
+      "cell_id": "a-evaluation-03",
+      "action_index": 16,
+      "action": "finish",
+      "error": "Closing main paragraph not reached",
+      "interaction_seconds": 0.2,
+      "reading_seconds": 0,
+      "playback_seconds": 0,
+      "recovery": "Finish rejected by executor state; reading and scrolling continued to the actual closing."
+    }
+  ]
+}

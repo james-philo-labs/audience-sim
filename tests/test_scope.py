@@ -21,7 +21,7 @@ class ScopeTests(unittest.TestCase):
         self.assertNotIn("post_overrides", out)
         self.assertEqual(out["reading_goal"], self.profile["reading_goal"])
         self.assertNotIn("four submission bundles", json.dumps(out))
-        self.assertEqual(meta["withheld_override_keys"], ["gdpval"])
+        self.assertEqual(meta["withheld_override_keys"], ["3dcodeverse", "gdpval"])
 
     def test_gdpval_applies_only_selected_fields(self):
         out, meta = assemble(self.profile, "gdpval")
@@ -64,6 +64,20 @@ class ScopeTests(unittest.TestCase):
             out, _ = assemble(p, "opus")
             self.assertEqual(out["id"], p["id"])
             self.assertNotIn("post_overrides", out)
+
+    def test_selected_3d_scope_is_neutral_and_isolated_for_every_role(self):
+        catalog = json.loads((ROOT / "engine/profiles.json").read_text())
+        for profile in catalog["profiles"]:
+            before = copy.deepcopy(profile)
+            out, meta = assemble(profile, "3dcodeverse")
+            self.assertEqual(out["reading_goal"], profile["post_overrides"]["3dcodeverse"]["reading_goal"])
+            self.assertEqual(meta["applied_override"], "3dcodeverse")
+            self.assertTrue(meta["catalog_not_forwarded"])
+            self.assertNotIn("post_overrides", out)
+            self.assertNotIn("four submission bundles", json.dumps(out))
+            for answer in ["0.933", "0.34", "12/12", "90%"]:
+                self.assertNotIn(answer, json.dumps(out))
+            self.assertEqual(profile, before)
 
 
 if __name__ == "__main__":

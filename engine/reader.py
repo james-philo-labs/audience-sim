@@ -19,7 +19,7 @@ import uuid
 HERE = Path(__file__).resolve().parent
 VERSION = "0.2.0"
 ENDPOINT = "https://api.openai.com/v1/responses"
-ARTICLES = {"example": None, "opus": None, "gdpval": None, "omni": None}
+ARTICLES = {"example": None, "opus": None, "gdpval": None, "omni": None, "3dcodeverse": None}
 from personas import assemble
 
 
